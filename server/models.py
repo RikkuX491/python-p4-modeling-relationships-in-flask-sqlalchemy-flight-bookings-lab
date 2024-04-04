@@ -18,13 +18,9 @@ class Flight(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     airline = db.Column(db.String)
 
-    bookings = db.relationship('Booking', back_populates='flight')
-
 class Customer(db.Model, SerializerMixin):
     __tablename__ = 'customers'
 
     id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.String)
     last_name = db.Column(db.String)
-
-    bookings = db.relationship('Booking', back_populates='customer')
