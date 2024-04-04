@@ -12,13 +12,13 @@ metadata = MetaData(naming_convention={
 db = SQLAlchemy(metadata=metadata)
 
 # define a model class by inheriting from db.Model.
-class Flight(db.Model, SerializerMixin):
+class Flight(db.Model):
     __tablename__ = 'flights'
 
     id = db.Column(db.Integer, primary_key=True)
     airline = db.Column(db.String)
 
-class Customer(db.Model, SerializerMixin):
+class Customer(db.Model):
     __tablename__ = 'customers'
 
     id = db.Column(db.Integer, primary_key=True)
