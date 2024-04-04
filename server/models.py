@@ -28,16 +28,3 @@ class Customer(db.Model, SerializerMixin):
     last_name = db.Column(db.String)
 
     bookings = db.relationship('Booking', back_populates='customer')
-
-class Booking(db.Model, SerializerMixin):
-    __tablename__ = 'bookings'
-
-    id = db.Column(db.Integer, primary_key=True)
-    price = db.Column(db.Float)
-    destination = db.Column(db.String)
-
-    flight_id = db.Column(db.Integer, db.ForeignKey('flights.id'))
-    customer_id = db.Column(db.Integer, db.ForeignKey('customers.id'))
-
-    flight = db.relationship('Flight', back_populates='bookings')
-    customer = db.relationship('Customer', back_populates='bookings')
