@@ -100,7 +100,7 @@ flight. Try this in the Flask shell:
 >>> from models import *
 >>> customer1 = Customer.query.filter_by(id=1).first()
 >>> customer1
-<Customer 1>
+<Customer 1, Alice Baker>
 >>> flights = [booking.flight for booking in customer1.bookings]
 >>> flights
 [<Flight 1, Jetblue>, <Flight 2, Delta>, <Flight 1, Jetblue>]
