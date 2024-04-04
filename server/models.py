@@ -29,4 +29,4 @@ class Customer(db.Model):
     last_name = db.Column(db.String)
 
     def __repr__(self):
-        return f'<Customer {self.id}, {self.first_name}, {self.last_name}>'
+        return f'<Customer {self.id}, {self.first_name} {self.last_name}>'
