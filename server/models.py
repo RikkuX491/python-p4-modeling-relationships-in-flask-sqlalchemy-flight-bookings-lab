@@ -18,9 +18,15 @@ class Flight(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     airline = db.Column(db.String)
 
+    def __repr__(self):
+        return f'<Flight {self.id}, {self.airline}>'
+
 class Customer(db.Model):
     __tablename__ = 'customers'
 
     id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.String)
     last_name = db.Column(db.String)
+
+    def __repr__(self):
+        return f'<Customer {self.id}, {self.first_name}, {self.last_name}>'

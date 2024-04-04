@@ -103,7 +103,7 @@ flight. Try this in the Flask shell:
 <Customer 1>
 >>> flights = [booking.flight for booking in customer1.bookings]
 >>> flights
-[<Flight 1>, <Flight 2>, <Flight 1>]
+[<Flight 1, Jetblue>, <Flight 2, Delta>, <Flight 1, Jetblue>]
 >>>
 ```
 
@@ -115,7 +115,7 @@ customer as:
 
 ```py
 >>> customer1.flights
-[<Flight 1>, <Flight 2>, <Flight 1>]
+[<Flight 1, Jetblue>, <Flight 2, Delta>, <Flight 1, Jetblue>]
 ```
 
 ## Task # 3: Add Serialization
